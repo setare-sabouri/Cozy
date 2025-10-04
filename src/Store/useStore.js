@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import Weather from "../Components/Weather/Weather";
 
 export const useStore = create((set) => ({
   theme: "light",
@@ -7,7 +8,10 @@ export const useStore = create((set) => ({
   setColor: (color) => set({ color }),
 
   testvalue:1,
-  setMagnitude:(magnitude)=>set({magnitude})
+  setMagnitude:(magnitude)=>set({magnitude}),
+
+  Weather :"Sunny",
+  setWeather :(Weather)=>set({Weather})
 
 
 }));

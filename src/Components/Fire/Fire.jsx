@@ -5,11 +5,11 @@ const FireCmp = () => {
     const { color } = useStore()
     return (
         <Fire
-            // ref={fireRef.ref}
             texture="/Textures/fire.png"
             color={color}
             scale={[3, 3, 2]}
-            position={[0, 1.4, 0]}
+            position={[0, 3.4, 0]}
+            rotation={[0,Math.PI/2,0]}
             magnitude={1.4}
             lacunarity={2}
             onUpdate={(fire, time) => {
