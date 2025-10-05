@@ -3,6 +3,7 @@ import { useStore } from '../../Store/useStore'
 import RainyMaterial from './Seasons/Rainy/RainyMaterial'
 import SunnyMaterial from './Seasons/Sunny/SunnyMaterial'
 import SnowyMaterial from './Seasons/Snowy/SnowyMaterial'
+import StormyMaterial from './Seasons/Stormy/Stormy'
 
 const WindowManager = () => {
     const { Weather } = useStore()
@@ -14,6 +15,8 @@ const WindowManager = () => {
             return <RainyMaterial/>
         case 'Snowy':
             return <SnowyMaterial/>
+        case 'Stormy':
+            return <StormyMaterial/>
     }
 }
 

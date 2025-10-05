@@ -4,11 +4,12 @@ import * as THREE from "three";
 import { PARTICLE_MODES } from "../../Utils/Config/particlesConfig";
 
 const geometryMap = {
-  cylinder: <cylinderGeometry args={[0.01, 0.01, 0.5, 8]} />, // Rain 
+  cylinder: <cylinderGeometry args={[0.005, 0.005, 0.5, 8]} />, // Rain 
   octahedron: <octahedronGeometry args={[0.05, 0]} />, // Snow
+  Stormycylinder: <cylinderGeometry args={[0.02, 0.02, 0.6, 8]} />,
 };
 
-const Particles = ({ count = 500, mode = "Rainy" }) => {
+const Particles = ({ count = 500, mode = "Rainy" ,distanceToWindow=10}) => {
   const config = PARTICLE_MODES[mode] || PARTICLE_MODES.Sunny;
   const meshRef = useRef();
   const dummy = useMemo(() => new THREE.Object3D(), []);
@@ -19,24 +20,28 @@ const Particles = ({ count = 500, mode = "Rainy" }) => {
   // Particles init setup
   const particles = useMemo(() => {
     return new Array(count).fill().map(() => ({
-      x: (Math.random() - 0.5) * 10,
+      x: (Math.random() + 0.3) *distanceToWindow,
       y: Math.random() * 10,
-      z: (Math.random() - 0.5) * 10,
+      z: (Math.random() - 0.5) * 18,
       speed: Math.random() * (config.speedMax - config.speedMin) + config.speedMin,
-      drift: config.drift ? Math.random() * config.drift * 2 - config.drift: 0,
+    //   drift: config.drift ? (Math.random()) * config.drift * 2 - config.drift: 0,
+    drift: config.drift * 2 -config.drift
+
     }));
-  }, [count, config]);
+  }, [config]);
 
 
   useFrame((state) => {
     particles.forEach((p, i) => {
       p.y -= p.speed;
+      
       if (config.drift) {
-        p.x += Math.sin(state.clock.elapsedTime + i) * p.drift;
+        console.log(Math.sin(state.clock.elapsedTime + i) * p.drift)
+        p.z += Math.sin(state.clock.elapsedTime + i) * p.drift;
       }
       if (p.y < 0) {
         p.y = 10;
-        p.x = (Math.random() - 0.5) * 20;
+        p.x = (Math.random() *distanceToWindow );
       }
 
       dummy.position.set(p.x, p.y, p.z);
@@ -56,10 +61,13 @@ const Particles = ({ count = 500, mode = "Rainy" }) => {
   });
 
   return (
+    <group position={[3,0,0]}>
     <instancedMesh ref={meshRef} args={[null, null, count]}>
       {geometryMap[config.geometry]}
       <meshBasicMaterial attach="material" {...config.material} />
     </instancedMesh>
+    </group>
+
   );
 };
 

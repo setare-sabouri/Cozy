@@ -8,34 +8,43 @@ const Weather = () => {
     <>
       <Text
         name="Rainy"
-        position={[-3, 1, 0]}
+        position={[-3, 1.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
-        onClick={(e)=>{setWeather(e.object.name)}}
+        onClick={(e) => { setWeather(e.object.name) }}
       >
         Rainy
       </Text>
 
       <Text
         name="Sunny"
-        position={[-3, 0, 0]}
+        position={[-3, 0.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
-        onClick={(e)=>{setWeather(e.object.name)}}
+        onClick={(e) => { setWeather(e.object.name) }}
       >
         Sunny
       </Text>
 
       <Text
         name="Snowy"
-        position={[-3, -1, 0]}
+        position={[-3, -0.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
-        onClick={(e)=>{setWeather(e.object.name)}}
+        onClick={(e) => { setWeather(e.object.name) }}
       >
         Snowy
       </Text>
 
+      <Text
+        name="Stormy"
+        position={[-3, -1.5, 0]}
+        fontSize={0.5}
+        raycast={meshBounds}
+        onClick={(e) => { setWeather(e.object.name) }}
+      >
+        Stormy
+      </Text>
 
       <Text position={[0, -2, 0]} fontSize={0.3}>
         Selected: {Weather}

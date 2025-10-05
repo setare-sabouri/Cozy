@@ -16,7 +16,7 @@ const Experience = () => {
       <color attach="background" args={['#613a2b']} />
       <ambientLight intensity={1} />
       <Environment preset='forest' />
-      <axesHelper args={[5]} />
+      <axesHelper args={[3]} />
       <gridHelper />
     </Canvas>
 

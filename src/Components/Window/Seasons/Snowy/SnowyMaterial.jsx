@@ -11,7 +11,7 @@ const SnowyMaterial = () => {
       <ambientLight intensity={0.5} />
       <Environment preset="city" />
       <color attach="background" args={['#5a5f60']} />
-      <Particles count={500} mode={Weather} />
+      <Particles count={500} mode={Weather} distanceToWindow={20}/>
     </MeshPortalMaterial>
   )
 }

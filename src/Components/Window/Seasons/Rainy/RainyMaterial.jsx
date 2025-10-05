@@ -15,7 +15,7 @@ const RainyMaterial = ({ count = 500 }) => {
       <ambientLight intensity={0.5} />
       <Environment preset="city" />
       <color attach="background" args={['#08103d']} />
-      <Particles count={500} mode={Weather}/>
+      <Particles count={200} mode={Weather} distanceToWindow={5}/>
     </MeshPortalMaterial>
   )
 }
