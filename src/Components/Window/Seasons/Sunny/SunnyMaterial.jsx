@@ -21,9 +21,6 @@ const SunnyMaterial = () => {
       <group >
         <Sphere args={[1, 32, 32]} material={SunMaterial} position={[4, 6, 5]}/>
       </group>
-
-
-
     </MeshPortalMaterial>
   )
 }
