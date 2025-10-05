@@ -13,7 +13,7 @@ const Experience = () => {
         <Weather />
       </PresentationControls>
       <Perf position="top-left" />
-      <color attach="background" args={['#4c443d']} />
+      <color attach="background" args={['#613a2b']} />
       <ambientLight intensity={1} />
       <Environment preset='forest' />
       <axesHelper args={[5]} />
