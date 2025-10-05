@@ -9,7 +9,7 @@ const geometryMap = {
   Stormycylinder: <cylinderGeometry args={[0.02, 0.02, 0.6, 8]} />,
 };
 
-const Particles = ({ count = 500, mode = "Rainy" ,distanceToWindow=10}) => {
+const Particles = ({ count = 500, mode = "Rainy" ,distanceToWindow=0.5}) => {
   const config = PARTICLE_MODES[mode] || PARTICLE_MODES.Sunny;
   const meshRef = useRef();
   const dummy = useMemo(() => new THREE.Object3D(), []);
@@ -20,12 +20,11 @@ const Particles = ({ count = 500, mode = "Rainy" ,distanceToWindow=10}) => {
   // Particles init setup
   const particles = useMemo(() => {
     return new Array(count).fill().map(() => ({
-      x: (Math.random() + 0.3) *distanceToWindow,
-      y: Math.random() * 10,
-      z: (Math.random() - 0.5) * 18,
+      x: (Math.random() +distanceToWindow ) *10,
+      y: (Math.random()) * 15,
+      z: (Math.random() - 0.5) * 30,
       speed: Math.random() * (config.speedMax - config.speedMin) + config.speedMin,
-    //   drift: config.drift ? (Math.random()) * config.drift * 2 - config.drift: 0,
-    drift: config.drift * 2 -config.drift
+      drift: config.drift ? (Math.random()) * config.drift * 2 - config.drift: 0,
 
     }));
   }, [config]);
@@ -36,12 +35,11 @@ const Particles = ({ count = 500, mode = "Rainy" ,distanceToWindow=10}) => {
       p.y -= p.speed;
       
       if (config.drift) {
-        console.log(Math.sin(state.clock.elapsedTime + i) * p.drift)
         p.z += Math.sin(state.clock.elapsedTime + i) * p.drift;
       }
-      if (p.y < 0) {
+      if (p.y < -5) {
         p.y = 10;
-        p.x = (Math.random() *distanceToWindow );
+        p.x = (Math.random()+distanceToWindow) * 10 ;
       }
 
       dummy.position.set(p.x, p.y, p.z);
@@ -72,3 +70,8 @@ const Particles = ({ count = 500, mode = "Rainy" ,distanceToWindow=10}) => {
 };
 
 export default Particles;
+
+
+// z left and right 
+// x to and back to window
+// y up and down

@@ -3,7 +3,6 @@ export const PARTICLE_MODES = {
         speedMin: 0.001,
         speedMax: 0.1,
         drift: 0,
-        driftDirection :1,
         geometry: "cylinder",
         material: { color: "#87CEEB", transparent: true, opacity: 0.6 }
     },
@@ -11,7 +10,6 @@ export const PARTICLE_MODES = {
         speedMin: 0,
         speedMax: 0.02,
         drift: 0.01,
-        driftDirection :-1,
         geometry: "octahedron",
         material: { color: "#FFFFFF" }
     },
@@ -26,7 +24,7 @@ export const PARTICLE_MODES = {
     Stormy: {
         speedMin: 0.09,
         speedMax: 0.1,
-        drift: 0.001, //wind
+        drift: 0.01, //wind
         geometry: "Stormycylinder",
         material: { color: "#77aae4", transparent: true, opacity: 0.8 },
     }
