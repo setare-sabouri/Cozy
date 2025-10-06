@@ -6,11 +6,10 @@ import { useLoader } from '@react-three/fiber';
 
 const CloudyMaterial = () => {
 
-  const MoonTex = useLoader(THREE.TextureLoader, '/Textures/Cloudy/moon.jpg')
+  const MoonTex = useLoader(THREE.TextureLoader, '/Textures/Cloudy/MoonTex.jpg')
   MoonTex.center.set(0.5,0.5);
-  MoonTex.rotation = Math.PI / 2; 
-  MoonTex.offset.set(0, 0); 
-
+  MoonTex.rotation = Math.PI / 4; 
+ 
 
   const MoonMaterial = new THREE.MeshBasicMaterial({ map: MoonTex });
 
