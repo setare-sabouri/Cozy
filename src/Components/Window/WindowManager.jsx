@@ -1,10 +1,10 @@
 import React from 'react'
 import { useStore } from '../../Store/useStore'
-import RainyMaterial from './Seasons/Rainy/RainyMaterial'
-import SunnyMaterial from './Seasons/Sunny/SunnyMaterial'
-import SnowyMaterial from './Seasons/Snowy/SnowyMaterial'
-import NightMaterial from './Seasons/Night/NightMaterial'
-import StormyMaterial from './Seasons/Stormy/StormyMaterial'
+import RainyMaterial from './Modes/Rainy/RainyMaterial'
+import SunnyMaterial from './Modes/Sunny/SunnyMaterial'
+import SnowyMaterial from './Modes/Snowy/SnowyMaterial'
+import NightMaterial from './Modes/Night/NightMaterial'
+import StormyMaterial from './Modes/Stormy/StormyMaterial'
 
 const WindowManager = () => {
     const { Weather } = useStore()

@@ -1,4 +1,4 @@
-import { meshBounds, Select, Text } from '@react-three/drei'
+import { meshBounds, Text } from '@react-three/drei'
 import { useStore } from '../../Store/useStore'
 
 const Weather = () => {
@@ -8,6 +8,7 @@ const Weather = () => {
     <>
       <Text
         name="Rainy"
+        color={'black'}
         position={[-3, 1.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
@@ -18,6 +19,7 @@ const Weather = () => {
 
       <Text
         name="Sunny"
+        color={'black'}
         position={[-3, 0.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
@@ -28,6 +30,7 @@ const Weather = () => {
 
       <Text
         name="Night"
+        color={'black'}
         position={[-3, 0.9, 0]}
         fontSize={0.5}
         raycast={meshBounds}
@@ -38,6 +41,7 @@ const Weather = () => {
 
       <Text
         name="Snowy"
+        color={'black'}
         position={[-3, -0.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
@@ -48,6 +52,7 @@ const Weather = () => {
 
       <Text
         name="Stormy"
+        color={'black'}
         position={[-3, -1.5, 0]}
         fontSize={0.5}
         raycast={meshBounds}
@@ -56,7 +61,11 @@ const Weather = () => {
         Stormy
       </Text>
 
-      <Text position={[0, 2, 0]} fontSize={0.3}>
+      <Text
+        color={'black'}
+        position={[0, 2, 0]}
+        fontSize={0.3}
+      >
         Selected: {Weather}
       </Text>
     </>
