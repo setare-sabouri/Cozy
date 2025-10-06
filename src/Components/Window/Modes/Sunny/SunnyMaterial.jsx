@@ -1,7 +1,6 @@
-import { Environment, MeshPortalMaterial, Sky, Sphere } from '@react-three/drei'
-import { useFrame, useLoader } from '@react-three/fiber'
+import { Environment, MeshPortalMaterial, Sphere } from '@react-three/drei'
+import {  useLoader } from '@react-three/fiber'
 import * as THREE from 'three';
-import SeasonalClouds from '../Clouds';
 
 const SunnyMaterial = () => {
 
