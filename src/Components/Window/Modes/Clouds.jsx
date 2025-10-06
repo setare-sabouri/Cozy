@@ -11,11 +11,10 @@ const SeasonalClouds = ({ position = [10, 9, 0], bounds = [1, 1, 10], color = "#
             bounds={bounds}
             color={color}
             fade={50}
-            speed={Weather === 'Stormy' ? 0.8 : Weather === 'Rainy' ? 0.2 : Weather === 'Cloudy' ? 0.4 : 2}
-            growth={Weather === 'Stormy' ? 8 : Weather === 'Rainy' ? 6 : Weather === 'Cloudy' ? 5 : 8}
+            speed={Weather === 'Stormy' ? 0.8 : Weather === 'Rainy' ? 0.2 : Weather === 'Cloudy' ? 0.4 : Weather==='Snowy'?0.1:5}
+            growth={Weather === 'Stormy' ? 8 : Weather === 'Rainy' ? 6 : Weather === 'Cloudy' ? 5 : Weather==='Snowy'?0.1:5}
             segments={40}
-            volume={Weather === 'Stormy' ? 10 : Weather === 'Rainy' ? 0 : Weather === 'Cloudy' ? 20 : 20}
-            opacity={Weather === 'Stormy' ? 0.2 : Weather === 'Rainy' ? 1.4 : Weather === 'Cloudy' ? 2 : 2}
+            volume={Weather === 'Stormy' ? 10 : Weather === 'Rainy' ? 0 : Weather === 'Cloudy' ? 20 : Weather==='Snowy'?30:5}
         />
     )
 }

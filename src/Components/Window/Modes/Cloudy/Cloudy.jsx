@@ -12,9 +12,8 @@ const CloudyMaterial = () => {
       <Environment preset="city" />
       <Stars />
       <group >
-        <Clouds>
           <SeasonalClouds position={[100, 18, 10]} bounds={[50,4, 30]} color='#949c9b' />
-        </Clouds>
+          {/* moon */}
       </group>
     </MeshPortalMaterial>
 
