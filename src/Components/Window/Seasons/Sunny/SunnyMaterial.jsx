@@ -1,6 +1,5 @@
 import { Environment, MeshPortalMaterial, Sky, Sphere } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
-import { useRef } from 'react';
 import * as THREE from 'three';
 
 const SunnyMaterial = () => {
@@ -10,8 +9,6 @@ const SunnyMaterial = () => {
   SunTex.rotation = Math.PI / 2;
 
   const SunMaterial = new THREE.MeshBasicMaterial({ map: SunTex });
-
-
 
   return (
     <MeshPortalMaterial>

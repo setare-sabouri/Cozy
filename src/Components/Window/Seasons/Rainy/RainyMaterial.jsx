@@ -1,8 +1,4 @@
 import { Clouds, Environment, MeshPortalMaterial } from '@react-three/drei'
-import FireCmp from '../../../Fire/Fire'
-import { useMemo, useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 import Particles from '../../Particles';
 import { useStore } from '../../../../Store/useStore';
 import SeasonalClouds from '../Clouds';
@@ -21,9 +17,7 @@ const RainyMaterial = ({ count = 500 }) => {
         <SeasonalClouds position={[7, 9, 1]} bounds={[5, 1, 8]} color='#073b35' />
       </Clouds>
 
-
-
-      <Particles count={200} mode={Weather} distanceToWindow={1} />
+      <Particles count={200} mode={Weather} distanceToWindow={0.7} />
     </MeshPortalMaterial>
   )
 }
