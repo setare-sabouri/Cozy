@@ -29,14 +29,14 @@ const Weather = () => {
       </Text>
 
       <Text
-        name="Night"
+        name="Cloudy"
         color={'black'}
         position={[-3, 0.9, 0]}
         fontSize={0.5}
         raycast={meshBounds}
         onClick={(e) => { setWeather(e.object.name) }}
       >
-        Night
+        Cloudy
       </Text>
 
       <Text

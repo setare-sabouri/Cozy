@@ -4,7 +4,7 @@ import { useStore } from '../../../../Store/useStore';
 import SeasonalClouds from '../Clouds';
 
 const RainyMaterial = ({ count = 500 }) => {
-  const { Weather,color } = useStore()
+  const { Weather} = useStore()
 
 
   return (

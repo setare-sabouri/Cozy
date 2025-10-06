@@ -3,11 +3,12 @@ import { useStore } from '../../Store/useStore'
 import RainyMaterial from './Modes/Rainy/RainyMaterial'
 import SunnyMaterial from './Modes/Sunny/SunnyMaterial'
 import SnowyMaterial from './Modes/Snowy/SnowyMaterial'
-import NightMaterial from './Modes/Night/NightMaterial'
 import StormyMaterial from './Modes/Stormy/StormyMaterial'
+import CloudyMaterial from './Modes/Cloudy/Cloudy'
 
 const WindowManager = () => {
     const { Weather } = useStore()
+
 
     switch (Weather) {
         case 'Sunny':
@@ -18,8 +19,8 @@ const WindowManager = () => {
             return <SnowyMaterial />
         case 'Stormy':
             return <StormyMaterial />
-        case 'Night':
-            return <NightMaterial />
+        case 'Cloudy':
+            return <CloudyMaterial />
     }
 }
 
