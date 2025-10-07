@@ -1,6 +1,5 @@
-import { useGLTF, Clone } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import WindowManager from './WindowManager'
-import * as THREE from 'three'
 import { Suspense } from 'react'
 
 const Window = () => {

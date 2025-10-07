@@ -2,7 +2,9 @@ import {  Environment, PresentationControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 import Window from '../Window/Window'
-import Weather from '../Weather/Weather'
+import Weather from '../../Interface/Weather'
+
+
 
 const Experience = () => {
   return (

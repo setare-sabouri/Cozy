@@ -1,5 +1,4 @@
 import { Cloud, Clouds } from '@react-three/drei'
-import React from 'react'
 import { useStore } from '../../../Store/useStore'
 
 const SeasonalClouds = ({ position = [10, 9, 0], bounds = [1, 1, 10], color = "#d0c9c9" }) => {
