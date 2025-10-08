@@ -7,14 +7,18 @@ export const useStore = create((set) => ({
   color: "#cebd6d",
   setColor: (color) => set({ color }),
 
-  testvalue:1,
-  setMagnitude:(magnitude)=>set({magnitude}),
+  testvalue: 1,
+  setMagnitude: (magnitude) => set({ magnitude }),
 
-  Weather :"Sunny",
-  setWeather :(Weather)=>set({Weather}),
+  Weather: "Sunny",
+  setWeather: (Weather) => set({ Weather }),
 
-  CityName:"tehran",
-  setCityName :(CityName)=>set({CityName}),
+  WeatherData: null,
+  setWeatherData: (WeatherData) => set({ WeatherData }),
+
+
+  CityName: "Stockholm",
+  setCityName: (CityName) => set({ CityName }),
 
 
 }));
