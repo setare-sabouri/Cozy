@@ -3,8 +3,8 @@ import Weathers from './Weathers'
 import { Text } from '@react-three/drei'
 
 const Weather = () => {
-  const { Weather, CityName, WeatherData } = useStore((state) => state)
-  console.log(WeatherData.weather[0].main)
+  const {CityName, WeatherData } = useStore((state) => state)
+
   return (
     <>
       <Weathers />
@@ -13,8 +13,10 @@ const Weather = () => {
         position={[0, 2, 0]}
         fontSize={0.3}
       >
-
-        {WeatherData.weather[0].main} in {CityName}
+        {WeatherData && CityName 
+          ? `${WeatherData.weather[0].main} in ${CityName}`
+          : 'Search a city'}
+        {/* {WeatherData.weather[0].main} in {CityName} */}
       </Text>
     </>
   )
