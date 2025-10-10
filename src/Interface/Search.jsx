@@ -19,7 +19,6 @@ const Search = () => {
   return (
     <>
       <form className={styles.searchForm} onSubmit={handleSubmit}>
-
           <input
             type="text"
             placeholder="Search City"
