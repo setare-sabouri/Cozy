@@ -5,38 +5,55 @@
   top: 4%;
   right: 5%;
 
-  input {
+  input,
+  button {
     border-radius: 50px;
     padding: 0.5rem;
     background: transparent;
     color: black;
-    border: 1px solid black; 
+    border: 1px solid black;
 
     &::placeholder {
-      color: black; 
-      opacity: 1; 
+      color: black;
+      opacity: 1;
     }
 
     &[type="submit"] {
-      color: black; 
+      color: black;
       cursor: pointer;
     }
   }
+
 }
 
 
 
 
 // Details Component
+
+
 .DetailsContainer {
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+
+
+  .CityWeather {
+    justify-self: center;
+    color: rgb(5, 15, 15);
+  }
+
+  .weatherDetails {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+  }
 }

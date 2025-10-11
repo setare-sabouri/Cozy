@@ -1,36 +1,43 @@
 import { useState } from 'react';
-import styles from './Interface.module.scss'
+import styles from './Interface.module.scss';
 import { useStore } from '../Store/useStore';
 
 const Search = () => {
   const [name, setName] = useState("");
-  const { setCityName } = useStore((state) => state)
+  const { setCityName, fetchWeather, isLoading, error } = useStore();
 
   function handleChange(e) {
     setName(e.target.value);
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setCityName(name)
-    setName('')
+    if (!name.trim()) return;
+
+    setCityName(name);
+
+    await fetchWeather(name);
+
+    setName('');
   }
 
+
   return (
-    <>
-      <form className={styles.searchForm} onSubmit={handleSubmit}>
-          <input
-            id='search'
-            type="text"
-            placeholder="Search City"
-            value={name}
-            onChange={handleChange}
-          />
-        <input type="submit" />
-      </form>
-    </>
+    <form className={styles.searchForm} onSubmit={handleSubmit}>
+      <input
+        id="search"
+        type="text"
+        placeholder="Search City"
+        value={name}
+        onChange={handleChange}
+        disabled={isLoading}
+      />
+      <button type="submit" disabled={isLoading || !name.trim()}>
+        {isLoading ? 'Loading...' : 'Search'}
+      </button>
+    </form>
+  );
+};
 
-  )
-}
+export default Search;
 
-export default Search
