@@ -4,7 +4,7 @@ import { meshBounds, Text } from '@react-three/drei'
 
 
 const Weathers = () => {
-    const { setWeather } = useStore((state) => state)
+    const { setWeather,setCityName } = useStore((state) => state)
     return (
         <>
             <Text
@@ -13,7 +13,7 @@ const Weathers = () => {
                 position={[-3, 2.5, 0]}
                 fontSize={0.5}
                 raycast={meshBounds}
-                onClick={(e) => { setWeather(e.object.name) }}
+                onClick={(e) => { setWeather(e.object.name);setCityName(null) }}
             >
                 Rainy
             </Text>
@@ -24,7 +24,7 @@ const Weathers = () => {
                 position={[-3, 1.5, 0]}
                 fontSize={0.5}
                 raycast={meshBounds}
-                onClick={(e) => { setWeather(e.object.name) }}
+                onClick={(e) => { setWeather(e.object.name);setCityName(null) }}
             >
                 Cloudy
             </Text>
@@ -35,7 +35,7 @@ const Weathers = () => {
                 position={[-3, 0.5, 0]}
                 fontSize={0.5}
                 raycast={meshBounds}
-                onClick={(e) => { setWeather(e.object.name) }}
+                onClick={(e) => { setWeather(e.object.name);setCityName(null) }}
             >
                 Sunny
             </Text>
@@ -48,7 +48,7 @@ const Weathers = () => {
                 position={[-3, -0.5, 0]}
                 fontSize={0.5}
                 raycast={meshBounds}
-                onClick={(e) => { setWeather(e.object.name) }}
+                onClick={(e) => { setWeather(e.object.name);setCityName(null) }}
             >
                 Snowy
             </Text>
@@ -59,7 +59,7 @@ const Weathers = () => {
                 position={[-3, -1.5, 0]}
                 fontSize={0.5}
                 raycast={meshBounds}
-                onClick={(e) => { setWeather(e.object.name) }}
+                onClick={(e) => { setWeather(e.object.name);setCityName(null) }}
             >
                 Stormy
             </Text>

@@ -3,7 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 
 import WindowMDL from './Window/WindowMDL'
-import Weathers from '../Interface/Weathers'
+import Weathers from './Weathers'
+
 
 
 
