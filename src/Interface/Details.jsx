@@ -2,14 +2,16 @@ import { useStore } from '../Store/useStore'
 import styles from './Interface.module.scss'
 
 const Details = () => {
-    const { WeatherData,CityName } = useStore()
+    const { WeatherData, CityName } = useStore()
 
     return (
         <>
             <div className={styles.DetailsContainer}>
                 <div className={styles.CityWeather}>
                     <h1>
-                        city Weather
+                        {WeatherData && CityName
+                            ? `${WeatherData.weather[0].main} in ${CityName}`
+                            : 'Search a city'}
                     </h1>
                 </div>
                 <div className={styles.weatherDetails}>

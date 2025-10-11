@@ -1,3 +1,6 @@
+
+// Search Component
+
 .searchForm {
   display: flex;
   gap: 0.5rem;
@@ -27,8 +30,6 @@
 }
 
 
-
-
 // Details Component
 
 
@@ -44,6 +45,8 @@
   .CityWeather {
     justify-self: center;
     color: rgb(5, 15, 15);
+    position: absolute;
+    top: 4%;
   }
 
   .weatherDetails {
