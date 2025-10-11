@@ -1,8 +1,8 @@
 import { Environment, MeshPortalMaterial } from '@react-three/drei'
-import React from 'react'
-import Particles from '../../Particles'
-import { useStore } from '../../../../Store/useStore'
+import Particles from '../Particles'
+
 import SeasonalClouds from '../Clouds'
+import { useStore } from '../../../Store/useStore'
 
 const SnowyMaterial = () => {
     const {Weather}=useStore()

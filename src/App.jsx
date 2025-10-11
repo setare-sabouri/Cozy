@@ -1,4 +1,5 @@
-import Experience from './Components/Experience/Experience'
+
+import Experience from './Components/Experience'
 import Interface from './Interface/Interface'
 import LevaControls from './Interface/Leva'
 

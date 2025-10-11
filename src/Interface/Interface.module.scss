@@ -1,25 +1,42 @@
 .searchForm {
-    display: flex;
-    gap: 1rem;
-    position: absolute;
-    top: 4%;
-    right: 5%;
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  top: 4%;
+  right: 5%;
 
+  input {
+    border-radius: 50px;
+    padding: 0.5rem;
+    background: transparent;
+    color: black;
+    border: 1px solid black; 
+
+    &::placeholder {
+      color: black; 
+      opacity: 1; 
+    }
+
+    &[type="submit"] {
+      color: black; 
+      cursor: pointer;
+    }
+  }
 }
 
 
 
+
 // Details Component
-// .DetailsContainer {
-//     top: 0;
-//     color: black;
-//     right: 0;
-//     background-color: rgba(197, 62, 50, 0.233);
-//     position: absolute;
-//     width: 100vw;
-//     height: 100vh;
-//     pointer-events: none;
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-// }
+.DetailsContainer {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}

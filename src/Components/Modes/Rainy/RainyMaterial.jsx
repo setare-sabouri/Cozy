@@ -1,7 +1,8 @@
 import { Clouds, Environment, MeshPortalMaterial } from '@react-three/drei'
-import Particles from '../../Particles';
-import { useStore } from '../../../../Store/useStore';
+import Particles from '../Particles';
 import SeasonalClouds from '../Clouds';
+import { useStore } from '../../../Store/useStore';
+
 
 const RainyMaterial = ({ count = 500 }) => {
   const { Weather} = useStore()

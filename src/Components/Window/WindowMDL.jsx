@@ -2,7 +2,7 @@ import { useGLTF } from '@react-three/drei'
 import WindowManager from './WindowManager'
 import { Suspense } from 'react'
 
-const Window = () => {
+const WindowMDL = () => {
   const { scene, nodes } = useGLTF('/Models/windoww.glb')
   const clonedScene = scene.clone(true)
 
@@ -31,4 +31,4 @@ const Window = () => {
   )
 }
 
-export default Window
+export default WindowMDL

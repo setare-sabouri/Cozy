@@ -1,5 +1,6 @@
-import { Cloud, Clouds } from '@react-three/drei'
-import { useStore } from '../../../Store/useStore'
+import { Cloud } from '@react-three/drei'
+import { useStore } from '../../Store/useStore'
+
 
 const SeasonalClouds = ({ position = [10, 9, 0], bounds = [1, 1, 10], color = "#d0c9c9" }) => {
     const { Weather } = useStore()

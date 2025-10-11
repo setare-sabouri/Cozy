@@ -10,12 +10,23 @@ const Weathers = () => {
             <Text
                 name="Rainy"
                 color={'black'}
-                position={[-3, 1.5, 0]}
+                position={[-3, 2.5, 0]}
                 fontSize={0.5}
                 raycast={meshBounds}
                 onClick={(e) => { setWeather(e.object.name) }}
             >
                 Rainy
+            </Text>
+
+            <Text
+                name="Cloudy"
+                color={'black'}
+                position={[-3, 1.5, 0]}
+                fontSize={0.5}
+                raycast={meshBounds}
+                onClick={(e) => { setWeather(e.object.name) }}
+            >
+                Cloudy
             </Text>
 
             <Text
@@ -29,16 +40,7 @@ const Weathers = () => {
                 Sunny
             </Text>
 
-            <Text
-                name="Cloudy"
-                color={'black'}
-                position={[-3, 0.9, 0]}
-                fontSize={0.5}
-                raycast={meshBounds}
-                onClick={(e) => { setWeather(e.object.name) }}
-            >
-                Cloudy
-            </Text>
+
 
             <Text
                 name="Snowy"

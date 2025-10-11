@@ -4,7 +4,7 @@ import { useStore } from '../Store/useStore';
 
 const Search = () => {
   const [name, setName] = useState("");
-  const { setCityName, CityName } = useStore((state) => state)
+  const { setCityName } = useStore((state) => state)
 
   function handleChange(e) {
     setName(e.target.value);
@@ -20,12 +20,12 @@ const Search = () => {
     <>
       <form className={styles.searchForm} onSubmit={handleSubmit}>
           <input
+            id='search'
             type="text"
             placeholder="Search City"
             value={name}
             onChange={handleChange}
           />
-        
         <input type="submit" />
       </form>
     </>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Clouds, Environment, MeshPortalMaterial, Sphere, Stars } from '@react-three/drei'
+import {Environment, MeshPortalMaterial, Sphere, Stars } from '@react-three/drei'
 import SeasonalClouds from '../Clouds';
 import * as THREE from 'three';
 import { useLoader } from '@react-three/fiber';

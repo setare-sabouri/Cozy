@@ -1,6 +1,6 @@
 import React, {  useRef} from 'react'
 import { Environment, MeshPortalMaterial } from '@react-three/drei'
-import Particles from '../../Particles'
+import Particles from '../Particles'
 import { useFrame} from '@react-three/fiber';
 
 import SeasonalClouds from '../Clouds';
