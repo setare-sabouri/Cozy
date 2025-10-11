@@ -2,7 +2,6 @@ import { Environment, PresentationControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 
-import Weather from '../Interface/Weather'
 import WindowMDL from './Window/WindowMDL'
 import Weathers from '../Interface/Weathers'
 
