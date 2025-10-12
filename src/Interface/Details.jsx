@@ -3,6 +3,7 @@ import styles from './Interface.module.scss'
 
 const Details = () => {
     const { WeatherData, CityName } = useStore()
+    console.log(WeatherData)
 
     return (
         <>
@@ -16,7 +17,7 @@ const Details = () => {
                 </div>
                 <div className={styles.weatherDetails}>
                     <p>
-                        BBBBBB
+                        {`${Math.round(WeatherData.main.temp - 273.15 )} °`}
                     </p>
                     <p>
                         `$ coutry is {WeatherData?.sys.country}`
