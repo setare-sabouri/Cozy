@@ -9,7 +9,7 @@ export const fetchWeatherByCity = async (city) => {
     const { lat, lon } = geoData[0];
 
     // Get weather data
-    const weatherRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_CozyWeather}`);
+    const weatherRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_CozyWeather}&units=metric`);
     const weatherData = await weatherRes.json();
 
     return weatherData;

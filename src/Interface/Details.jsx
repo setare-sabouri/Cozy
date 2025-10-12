@@ -19,16 +19,16 @@ const Details = () => {
                     </div>
                     <div className={styles.weatherDetails}>
                         <p>
-                            `$ coutry is {WeatherData.sys.country}`
+                             {`coutry is ${WeatherData.sys.country}`}
                         </p>
                         <p>
-                            {`${Math.round(WeatherData.main.temp - 273.15)} °`}
+                            {`${Math.round(WeatherData.main.temp)} °`}
                         </p>
                         <p>
-                            {` Highest ${Math.round(WeatherData.main.temp_max - 273.15)} ° Lowest ${Math.round(WeatherData.main.temp_min - 273.15)} °`}
+                            {` Highest ${WeatherData.main.temp_max} ° Lowest ${WeatherData.main.temp_min} °`}
                         </p>
                         <p>
-                            {`Feels like ${Math.round(WeatherData.main.feels_like - 273.15)} °`}
+                            {`Feels like ${Math.round(WeatherData.main.feels_like)} °`}
                         </p>
                         <p>
                             {`Humidity ${WeatherData.main.humidity} %`}
