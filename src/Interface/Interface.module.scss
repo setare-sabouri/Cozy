@@ -47,9 +47,12 @@
     color: rgb(5, 15, 15);
     position: absolute;
     top: 4%;
+    pointer-events: fill;
+
   }
 
   .weatherDetails {
+    pointer-events: fill;
     display: flex;
     align-items: flex-end;
     justify-content: center;
