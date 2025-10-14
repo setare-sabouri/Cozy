@@ -2,24 +2,27 @@ import { useStore } from '../Store/useStore'
 import styles from './Interface.module.scss'
 
 const Details = () => {
-    const { WeatherData, CityName } = useStore()
-   
-    const  localTime= new Date((WeatherData?.dt + WeatherData?.timezone)*1000)
+    const { WeatherData, CityName, Weather } = useStore()
+
+    const localTime = new Date((WeatherData?.dt + WeatherData?.timezone) * 1000)
 
     return (
         <>
-            {WeatherData &&
-                <div className={styles.DetailsContainer}>
-                    <div className={styles.CityWeather}>
-                        <h1>
-                            {WeatherData && CityName
-                                ? `${WeatherData.weather[0].main} in ${CityName}`
-                                : 'Search a city'}
-                        </h1>
-                    </div>
+
+            <div className={styles.DetailsContainer}>
+
+                <div className={styles.CityWeather}>
+                    <h1>
+                        {WeatherData && CityName
+                            ? `${WeatherData.weather[0].main} in ${CityName}`
+                            : `${Weather}`}
+                    </h1>
+                </div>
+
+                {CityName && WeatherData &&
                     <div className={styles.weatherDetails}>
                         <p>
-                             {`coutry is ${WeatherData.sys.country}`}
+                            {`coutry is ${WeatherData.sys.country}`}
                         </p>
                         <p>
                             {`${Math.round(WeatherData.main.temp)} °`}
@@ -37,8 +40,9 @@ const Details = () => {
                             {`Time ${localTime.toLocaleString("en-SE", { timeZone: "UTC" })} `}
                         </p>
                     </div>
-                </div>
-            }
+                }
+            </div>
+
         </>
     )
 }

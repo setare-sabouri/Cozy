@@ -5,9 +5,6 @@ import { Perf } from 'r3f-perf'
 import WindowMDL from './Window/WindowMDL'
 
 
-
-
-
 const Experience = () => {
   return (
     <Canvas shadows camera={{ position: [0, 0, 15], fov: 25 }}>
