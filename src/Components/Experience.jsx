@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 
 import WindowMDL from './Window/WindowMDL'
-import Weathers from './Weathers'
+
 
 
 
@@ -13,7 +13,6 @@ const Experience = () => {
     <Canvas shadows camera={{ position: [0, 0, 15], fov: 25 }}>
       <PresentationControls polar={[-Math.PI / 3, Math.PI / 3]} azimuth={[-Math.PI / 2, Math.PI / 2]} >
         <WindowMDL />
-        <Weathers />
       </PresentationControls>
       <Perf position="top-left" />
       <color attach="background" args={['#613a2b']} />

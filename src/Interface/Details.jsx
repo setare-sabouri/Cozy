@@ -3,7 +3,7 @@ import styles from './Interface.module.scss'
 
 const Details = () => {
     const { WeatherData, CityName } = useStore()
-    console.log(WeatherData)
+   
     const  localTime= new Date((WeatherData?.dt + WeatherData?.timezone)*1000)
 
     return (
