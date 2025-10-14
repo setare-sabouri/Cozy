@@ -44,3 +44,5 @@ const Details = () => {
 }
 
 export default Details
+
+//picton in nz day night 

@@ -3,9 +3,9 @@ import WindowManager from './WindowManager'
 import { Suspense } from 'react'
 
 const WindowMDL = () => {
-  const { scene, nodes } = useGLTF('/Models/windoww.glb')
+  const { scene, nodes } = useGLTF('/Models/windownew.glb')
   const clonedScene = scene.clone(true)
-
+  
   // Remove Glass from the cloned scene
   const glass = clonedScene.getObjectByName('Glass')
   if (glass) {
@@ -16,11 +16,9 @@ const WindowMDL = () => {
     <Suspense fallback={null}>
     <group scale={0.4} position={[1, -1.7, 0]} rotation={[0, Math.PI / 2, 0]}>
 
-      {/* Full scene without Glass */}
-      <primitive object={clonedScene} />
+      <primitive object={clonedScene} />      {/* Full scene without Glass */}
 
-      {/* Glass mesh handled separately  */}
-      <mesh geometry={nodes.Glass.geometry}>
+      <mesh geometry={nodes.Glass.geometry}> {/* Glass mesh handled separately  */}
         <WindowManager />
       </mesh>
       
