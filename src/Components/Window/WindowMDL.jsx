@@ -1,14 +1,15 @@
-
-
 import { useGLTF } from '@react-three/drei'
 import WindowManager from './WindowManager'
-import { Suspense} from 'react'
+import { Suspense, useRef } from 'react'
 import { useStore } from '../../Store/useStore'
+import { motion } from 'motion/react'
+import { useFrame } from '@react-three/fiber'
+
 
 const WindowMDL = () => {
-const { setWeather, setCityName } = useStore((state) => state)
+  const { setWeather, setCityName, Weather } = useStore((state) => state)
 
-  const { scene, nodes } = useGLTF('/Models/windoww.glb')
+  const { scene, nodes } = useGLTF('/Models/windows.glb')
   const clonedScene = scene.clone(true)
 
   // Glass 
@@ -31,15 +32,20 @@ const { setWeather, setCityName } = useStore((state) => state)
     }
   }
 
-  const handlePointerOver = (e) => {
-    if (e.object.userData.clickable) document.body.style.cursor = 'pointer'
-  }
+  const basey = clonedScene.getObjectByName(Weather).position.y
+  useFrame((state) => {
+    if (Weather) {
+      const t = state.clock.elapsedTime
+      clonedScene.getObjectByName(Weather).position.y = basey + 0.7 + Math.sin(t * 2.5) * 0.3
+
+    }
+  })
+
 
   return (
     <Suspense fallback={null}>
       <group scale={0.4} position={[1, -1.7, 0]} rotation={[0, Math.PI / 2, 0]}
         onClick={handleClick}
-        onPointerOver={handlePointerOver}
       >
         <primitive object={clonedScene} />
         <mesh geometry={nodes.Glass.geometry}>
