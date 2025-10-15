@@ -2,7 +2,6 @@ import { useGLTF } from '@react-three/drei'
 import WindowManager from './WindowManager'
 import { Suspense, useRef } from 'react'
 import { useStore } from '../../Store/useStore'
-import { motion } from 'motion/react'
 import { useFrame } from '@react-three/fiber'
 
 
