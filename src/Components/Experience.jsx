@@ -7,16 +7,14 @@ import WindowMDL from './Window/WindowMDL'
 
 const Experience = () => {
   return (
-    <Canvas shadows camera={{ position: [0, 0, 25], fov: 25 }}>
-      <PresentationControls polar={[-Math.PI / 3, Math.PI / 3]} azimuth={[-Math.PI / 2, Math.PI / 2]} >
+    <Canvas shadows camera={{ position: [0, 2, 26], fov: 25 }}>
+      <PresentationControls polar={[-Math.PI / 3, Math.PI / 3]} azimuth={[-Math.PI / 2, Math.PI / 2]}  snap speed={0.5}>
         <WindowMDL />
       </PresentationControls>
-      <Perf position="top-left" />
+      {/* <Perf position="top-left" /> */}
       <color attach="background" args={['#613a2b']} />
       <ambientLight intensity={1} />
       <Environment preset='forest' />
-      // <axesHelper args={[3]} />
-      // <gridHelper />
     </Canvas>
 
   )

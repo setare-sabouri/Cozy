@@ -8,7 +8,7 @@ import { useFrame } from '@react-three/fiber'
 const WindowMDL = () => {
   const { setWeather, setCityName, Weather } = useStore((state) => state)
 
-  const { scene, nodes } = useGLTF('/Models/windowq.glb')
+  const { scene, nodes } = useGLTF('/Models/Mycozy.glb')
   const clonedScene = scene.clone(true)
 
   // Glass 
@@ -43,7 +43,7 @@ const WindowMDL = () => {
 
   return (
     <Suspense fallback={null}>
-      <group scale={0.4} position={[1, -1.7, 0]} rotation={[0, Math.PI / 2, 0]}
+      <group scale={0.4} position={[2.5, -1.7, 0]} rotation={[0, Math.PI / 2, 0]}
         onClick={handleClick}
       >
         <primitive object={clonedScene} />
