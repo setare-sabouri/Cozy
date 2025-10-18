@@ -7,7 +7,7 @@ import WindowMDL from './Window/WindowMDL'
 
 const Experience = () => {
   return (
-    <Canvas shadows camera={{ position: [0, 2, 26], fov: 25 }}>
+    <Canvas shadows camera={{ position: [0, 2, 30], fov: 25 }}>
       <PresentationControls polar={[-Math.PI / 3, Math.PI / 3]} azimuth={[-Math.PI / 2, Math.PI / 2]}  snap speed={0.5}>
         <WindowMDL />
       </PresentationControls>

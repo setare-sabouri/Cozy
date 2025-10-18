@@ -21,8 +21,8 @@ const CloudyMaterial = () => {
       <Environment preset="city" />
       <Stars/>
       <group >
-        <SeasonalClouds position={[100, 18, 10]} bounds={[50, 4, 30]} color='#949c9b' />
-        <Sphere args={[1.5, 32, 32]} material={MoonMaterial} position={[70, 10, -10]}  rotation={[Math.PI, Math.PI/2, 0]} />
+        <SeasonalClouds position={[100, 15, 0]} bounds={[50, 4, 30]} color='#949c9b' />
+        <Sphere args={[1.5, 32, 32]} material={MoonMaterial} position={[70, 8, -10]}  rotation={[Math.PI, Math.PI/2, 0]} />
       </group>
     </MeshPortalMaterial>
 

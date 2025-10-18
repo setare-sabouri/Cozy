@@ -8,13 +8,13 @@ import { useFrame } from '@react-three/fiber'
 const WindowMDL = () => {
   const { setWeather, setCityName, Weather } = useStore((state) => state)
 
-  const { scene, nodes } = useGLTF('/Models/Mycozy.glb')
+  const { scene, nodes } = useGLTF('/Models/roommm.glb')
   const clonedScene = scene.clone(true)
 
   // Glass 
   const glass = clonedScene.getObjectByName('Glass')
   if (glass && glass.parent) glass.parent.remove(glass)
-
+    console.log(nodes)
 
   // Weathers
   const clickableNames = ['Sunny', 'Stormy', 'Rainy', 'Cloudy', 'Snowy']
@@ -40,14 +40,13 @@ const WindowMDL = () => {
     }
   })
 
-
   return (
     <Suspense fallback={null}>
       <group scale={0.4} position={[2.5, -1.7, 0]} rotation={[0, Math.PI / 2, 0]}
         onClick={handleClick}
       >
         <primitive object={clonedScene} />
-        <mesh geometry={nodes.Glass.geometry}>
+        <mesh geometry={nodes.Glass.geometry} scale={1.6} position={[0,0,-5]} >
           <WindowManager />
         </mesh>
       </group>
